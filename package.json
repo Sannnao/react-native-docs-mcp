@@ -1,0 +1,63 @@
+{
+  "name": "react-native-docs-mcp",
+  "version": "0.1.0",
+  "description": "MCP server providing AI agents with semantic search over React Native documentation",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "react-native-docs-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --platform node --target node18 --out-dir dist --clean",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "react-native",
+    "react-native-docs",
+    "documentation",
+    "ai",
+    "claude",
+    "cursor",
+    "semantic-search",
+    "embeddings",
+    "vector-search"
+  ],
+  "author": "sannnao",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sannnao/react-docs-mcp.git",
+    "directory": "packages/react-native-docs-mcp"
+  },
+  "homepage": "https://github.com/Sannnao/react-docs-mcp/tree/master/packages/react-native-docs-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/Sannnao/react-docs-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.js.map",
+    "README.md"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "@xenova/transformers": "^2.17.2",
+    "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
+    "remark": "^15.0.1",
+    "simple-git": "^3.28.0",
+    "strip-markdown": "^6.0.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
